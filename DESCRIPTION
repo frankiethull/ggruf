@@ -1,0 +1,27 @@
+Package: ggruf
+Type: Package
+Title: Helpers for llama.cpp and GGUF Models
+Version: 0.1.1
+Authors@R: c(
+    person("Frank", "Hull", role = c("aut", "cre"),
+           email = "frankiethull@proton.me"),
+    person("nobu", role = "ctb",
+           comment = "AI assistant, package scaffolding and implementation"))
+Description: Pure R helpers for working with llama.cpp and GGUF model
+    files, with no compiled code and no bundled inference engine. Find
+    GGUF models on your machine (including the llama.cpp cache and
+    Ollama's blob store, resolved to real model names via Ollama
+    manifests), read GGUF metadata straight from the file header, and
+    start, stop, and query a local llama-server so chat tools such as
+    ellmer's chat_llamacpp() have something to talk to.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports:
+    curl,
+    jsonlite,
+    processx
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
